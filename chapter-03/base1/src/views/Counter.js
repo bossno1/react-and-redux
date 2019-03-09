@@ -49,13 +49,13 @@ class Counter extends React.Component{
         const value = this.state.value;
         const {caption} = this.props;
 
-    return (
-        <div>
-        <button  onClick={this.onIncrement}>+</button>
-        <button  onClick={this.onDecrement}>-</button>
-        <span>{caption} count: {value}</span>
-        </div>
-        );
+        return (
+            <div>
+            <button  onClick={this.onIncrement}>+</button>
+            <button  onClick={this.onDecrement}>-</button>
+            <span>{caption} count: {value}</span>
+            </div>
+            );
     }
 }
     
