@@ -5,6 +5,8 @@ export default (state, action) => {
 
   switch (action.type) {
     case ActionTypes.INCREMENT:
+      console.log({abc: ActionTypes.DECREMENT});
+       
       return {...state, [counterCaption]: state[counterCaption] + 1};
     case ActionTypes.DECREMENT:
       return {...state, [counterCaption]: state[counterCaption] - 1};
