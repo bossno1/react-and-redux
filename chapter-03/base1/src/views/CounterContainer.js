@@ -1,6 +1,7 @@
 import React from 'react'
-import Actions from '../ActionTypes'
+import * as Actions from '../Actions'
 import Counter from './Counter'
+import store from '../Store.js'
 class CounterContainer extends React.Component {
     constructor(props){
         super(props);
