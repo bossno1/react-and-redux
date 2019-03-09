@@ -4,9 +4,7 @@ import store from '../Store'
 class Summary extends React.Component{
     constructor(props){
         super(props);
-
         this.onChange = this.onChange.bind(this);
-
         this.state = this.getOwnState()
     }
     onChange(){
@@ -14,11 +12,12 @@ class Summary extends React.Component{
     }
     getOwnState(){
         const state = store.getState();
-        
+        console.log('state:',state);
         let sum = 0;
-        for (const key in state){
-            if (state.hasOwnProperty(key)){
-                sum += state[key];
+        for (const key1 in state){
+            console.log('key1=',key1)
+            if (state.hasOwnProperty(key1)){
+                sum += state[key1];
             }
         }
         return {sum : sum};
@@ -44,11 +43,5 @@ class Summary extends React.Component{
     componentWillUnmount() {
         store.unsubscribe(this.onChange);
     }
-
-    render() {
-        const sum = this.state.sum;
-        return (
-        <div>Total Count: {sum}</div>
-        );
-    }
 }
+export default Summary

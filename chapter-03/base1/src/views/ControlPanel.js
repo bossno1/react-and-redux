@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Counter from './Counter.js';
- 
+import Summary from './Summary'
 const style = {
   margin: '20px'
 };
@@ -13,7 +13,7 @@ class ControlPanel extends Component {
         <Counter caption="Second" />
         <Counter caption="Third" />
         <hr/>
-         
+        <Summary/>
       </div>
     );
   }
